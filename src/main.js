@@ -50,7 +50,7 @@ function parseRepo(urlString) {
   return pathParts[3];
 }
 
-function pollEndpoint(method, intervalMs = 10000) {
+function pollEndpoint(method, intervalMs = 3000) {
   return timer(0, intervalMs).pipe(
     switchMap(() => octokit.request(method, {
       org: 'ORG',
