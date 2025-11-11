@@ -1,0 +1,30 @@
+:root {
+
+    background-color: var(--bg-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100dvh;
+    color: var(--fg-color);
+    transition:  0.5s ease;
+}
+
+.action {
+    font-size: 20dvh;
+    margin-left: 2em;
+    margin-top: 0em;
+    transition: margin 0.5s ease-in;
+}
+
+.userHandle {
+    font-size: 10dvh;
+    margin-left: -2em;
+    margin-top: 0em;
+    transition: margin 0.7s ease-out;
+}
