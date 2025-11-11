@@ -60,19 +60,10 @@ const latest$ = events$.pipe(
   distinctUntilChanged((a, b) => a.id === b.id),
 );
 
-const bgMap = new Map([
-  ['WebKit', 'webkit'],
-  ['firefox', 'gecko'],
-]);
-
-function changeBG(engine) {
-  document.querySelector('#bg').innerText = engine;
-}
-
-function changeText(author, evt) {
-  document.querySelector('#author').innerText = author;
-  document.querySelector('#type').innerText = evt;
-}
+const bgMap = {
+  'WebKit': 'webkit',
+  'firefox': 'gecko',
+};
 
 latest$.subscribe({
   next: (evt) => {
