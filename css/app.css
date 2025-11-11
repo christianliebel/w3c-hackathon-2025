@@ -20,11 +20,30 @@ body {
     margin-left: 2em;
     margin-top: 0em;
     transition: margin 0.5s ease-in;
+    animation: actionSlide 3s ease-in-out infinite alternate;
 }
 
 .userHandle {
     font-size: 10dvh;
-    margin-left: -2em;
+    margin-left: 0em;
     margin-top: 0em;
-    transition: margin 0.7s ease-out;
+    transition: nameSlide 0.7s ease-out infinite alternate;
 }
+
+  @keyframes actionSlide {
+    0% {
+      margin-left: 0.2em;
+    }
+    100% {
+      margin-left: 0em;
+    }
+  }
+
+    @keyframes nameSlide {
+    0% {
+      margin-left: -0.2em;
+    }
+    100% {
+      margin-left: 0em;
+    }
+  }
